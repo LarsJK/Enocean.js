@@ -6,15 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "dependencies": {
-      "serialport": "1.0.6",
-      "binary": "0.3.0",
-    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iUtvikler/Enocean.js.git"
+  },
   "keywords": [
     "enocean",
-    "home",
-    "automation"
+    "home-automation"
   ],
   "author": "Lars-Jørgen Kristiansen",
   "license": "BSD"
