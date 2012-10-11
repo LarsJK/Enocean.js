@@ -1,3 +1,7 @@
+#Install
+
+npm install git://github.com/iUtvikler/Enocean.js.git#master
+
 #Use:
 
 	var Enocean = require('./enocean');
