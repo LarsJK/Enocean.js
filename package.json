@@ -15,5 +15,9 @@
     "home-automation"
   ],
   "author": "Lars-Jørgen Kristiansen",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "binary": "0.3.0",
+    "serialport": "1.0.8"
+  }
 }
