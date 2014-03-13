@@ -26,8 +26,6 @@ describe('ResponsePacket', function () {
         it('should return a buffer with correct format', function () {
             var buf = this.packet.serialize();
 
-            console.log(buf);
-
             buf.toString().should.equal(new Buffer([0x55, 0x00, 0x02, 0x00, 0x02, 0xD8, 0x00, 0xFF, 0xF3]).toString());
         });
     });
