@@ -1,5 +1,5 @@
 # Enocean.js
 
-[![Build Status](https://secure.travis-ci.org/iutvikler/enoceanjs.png)](http://travis-ci.org/iutvikler/enoceanjs)
+[![Build Status](https://travis-ci.org/iUtvikler/Enocean.js.png?branch=rewrite)](https://travis-ci.org/iUtvikler/Enocean.js)
 
 Pull requests are very welcome!
