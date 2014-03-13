@@ -17,10 +17,10 @@ describe('EnoceanParser', function () {
 					this.done();
 				}
 			},
-			emit: function (packetType, data, optionalData) {
-				packetType.should.equal(0x05);
-				data.toString().should.equal(new Buffer([0x02]).toString());
-				optionalData.toString().should.equal(new Buffer([0x07]).toString());
+			emit: function (event, packet) {
+				packet.type.should.equal(0x05);
+				packet.data.toString().should.equal(new Buffer([0x02]).toString());
+				packet.optional.toString().should.equal(new Buffer([0x07]).toString());
 				this.packetRecieved();
 			}
 		};
