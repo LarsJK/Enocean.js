@@ -1,6 +1,6 @@
 'use strict';
 
-var should = require('should'),
+var assert = require('assert'),
 	parser = require('../lib/enocean-parser')();
 
 describe('EnoceanParser', function () {
@@ -18,9 +18,9 @@ describe('EnoceanParser', function () {
 				}
 			},
 			emit: function (event, packet) {
-				packet.type.should.equal(0x05);
-				packet.data.toString().should.equal(new Buffer([0x02]).toString());
-				packet.optional.toString().should.equal(new Buffer([0x07]).toString());
+				assert.equal(packet.typeId, 0x05);
+				assert.deepEqual(packet.data, new Buffer([0x02]));
+				assert.deepEqual(packet.optional, new Buffer([0x07]));
 				this.packetRecieved();
 			}
 		};

@@ -1,6 +1,6 @@
 'use strict';
 
-var should = require('should'),
+var assert = require('assert'),
     factory = require('../lib/packet-factory'),
     BasePacket = require('../lib/base-packet'),
     RadioPacket = require('../lib/radio-packet'),
@@ -17,7 +17,7 @@ describe('PacketFactory', function () {
 
         var packet = factory(raw);
 
-        packet.constructor.should.equal(BasePacket);
+        assert.equal(packet.constructor, BasePacket);
     });
 
     it('should create RadioPacket if typeId is 0x01', function () {
@@ -29,7 +29,7 @@ describe('PacketFactory', function () {
 
         var packet = factory(raw);
 
-        packet.constructor.should.equal(RadioPacket);
+        assert.equal(packet.constructor, RadioPacket);
     });
 
     it('should create ResponsePacket if typeId is 0x02', function () {
@@ -41,6 +41,6 @@ describe('PacketFactory', function () {
 
         var packet = factory(raw);
 
-        packet.constructor.should.equal(ResponsePacket);
+        assert.equal(packet.constructor, ResponsePacket);
     });
 });

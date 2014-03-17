@@ -1,6 +1,6 @@
 'use strict';
 
-var should = require('should'),
+var assert = require('assert'),
     BasePacket = require('../lib/base-packet');
 
 describe('BasePacket', function () {
@@ -10,9 +10,9 @@ describe('BasePacket', function () {
         it('should return self with set properties', function () {
             var packet = new BasePacket(0x05, new Buffer([0x02]), new Buffer([0x07]));
 
-            packet.typeId.should.equal(0x05);
-            packet.data.toString().should.equal(new Buffer([0x02]).toString());
-            packet.optionalData.toString().should.equal(new Buffer([0x07]).toString());
+            assert.equal(packet.typeId, 0x05);
+            assert.deepEqual(packet.data, new Buffer([0x02]));
+            assert.deepEqual(packet.optionalData, new Buffer([0x07]));
         });
     });
 
@@ -23,7 +23,7 @@ describe('BasePacket', function () {
 
             var buf = packet.serialize();
 
-            buf.toString().should.equal(new Buffer([0x55, 0x00, 0x01, 0x01, 0x05, 0x65, 0x02, 0x07, 0x3F]).toString());
+            assert.deepEqual(buf, new Buffer([0x55, 0x00, 0x01, 0x01, 0x05, 0x65, 0x02, 0x07, 0x3F]));
         });
     });
 });

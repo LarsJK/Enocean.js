@@ -1,7 +1,7 @@
 'use strict';
 
-var should = require('should'),
-    BaseCommonCommandPacket = require('../../lib/common-commands/base-common-command-packet');
+var assert = require('assert'),
+    BaseCommonCommandPacket = require('../lib/common-commands/base-common-command-packet');
 
 describe('BaseCommonCommandPacket', function () {
 
@@ -16,8 +16,7 @@ describe('BaseCommonCommandPacket', function () {
         it('should return self with set properties', function () {
             this.packet.typeId.should.equal(0x05, 'typeId');
 
-            this.packet.data.toString()
-                .should.equal(new Buffer([0x00, 0xFF]).toString());
+            assert.deepEqual(this.packet.data, new Buffer([0x00, 0xFF]));
         });
     });
 
@@ -26,19 +25,18 @@ describe('BaseCommonCommandPacket', function () {
         it('should return a buffer with correct format', function () {
             var buf = this.packet.serialize();
 
-            buf.toString().should.equal(new Buffer([0x55, 0x00, 0x02, 0x00, 0x05, 0xCD, 0x00, 0xFF, 0xF3]).toString());
+            assert.deepEqual(buf, new Buffer([0x55, 0x00, 0x02, 0x00, 0x05, 0xCD, 0x00, 0xFF, 0xF3]));
         });
     });
 
     describe('data properties', function () {
 
         it('should have commonCommandCode', function () {
-            this.packet.commonCommandCode.should.equal(0x00);
+            assert.equal(this.packet.commonCommandCode, 0x00);
         });
 
         it('should have commonCommandData', function () {
-            this.packet.commonCommandData.toString()
-                .should.equal(new Buffer([0xFF]).toString());
+            assert.deepEqual(this.packet.commonCommandData, new Buffer([0xFF]));
         });
     });
 

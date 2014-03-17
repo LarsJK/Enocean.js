@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	mocha = require('gulp-mocha');
 
 var paths = {
-	scripts: ['./**/*.js', '!./node_modules/**/*.js'],
+	scripts: ['./**/*.js', '!./node_modules/**/*.js', '!./coverage/**/*.js'],
 	tests: './test/**/*.js'
 };
 
