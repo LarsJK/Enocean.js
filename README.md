@@ -11,3 +11,6 @@ npm install git://github.com/iUtvikler/Enocean.js.git#master
     		console.log("Sensor " + rslt.SenderId + " measured a temperature of " + rslt.Value);
   		});
 	});
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/iUtvikler/enocean.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
