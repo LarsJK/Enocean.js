@@ -14,7 +14,7 @@ describe('BaseCommonCommandPacket', function () {
     describe('constructor', function () {
 
         it('should return self with set properties', function () {
-            this.packet.typeId.should.equal(0x05, 'typeId');
+            assert.equal(this.packet.typeId, 0x05, 'typeId');
 
             assert.deepEqual(this.packet.data, new Buffer([0x00, 0xFF]));
         });
