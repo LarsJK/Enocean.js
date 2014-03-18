@@ -5,7 +5,7 @@ Pull requests are very welcome!
 [npm-url]: https://npmjs.org/package/enocean
 [npm-image]: https://badge.fury.io/gh/iUtvikler%2FEnocean.js.png
 [travis-url]: https://travis-ci.org/iUtvikler/Enocean.js
-[travis-image]: https://travis-ci.org/iUtvikler/Enocean.js.png?branch=rewrite
+[travis-image]: https://travis-ci.org/iUtvikler/Enocean.js.png?branch=master
 [coveralls-url]: https://coveralls.io/r/iUtvikler/Enocean.js
 [coveralls-image]: https://coveralls.io/repos/iUtvikler/Enocean.js/badge.png
 [depstat-url]: https://david-dm.org/iUtvikler/Enocean.js
