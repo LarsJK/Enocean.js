@@ -1,6 +1,8 @@
 # Enocean.js [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][daviddm-url]][daviddm-image]
 
-Pull requests are very welcome!
+**This project is currently not in development**
+
+This is pre-alpha sofware and should not be used. If someone finds this usefull and can maintain the project id be happy to pass it on.
 
 [npm-url]: https://npmjs.org/package/enocean
 [npm-image]: https://badge.fury.io/gh/iUtvikler%2FEnocean.js.png
